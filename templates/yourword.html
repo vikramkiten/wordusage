@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <style>
+        .title{
+
+            padding:20px;
+            background-color: rgba(209,199,255,0.47);
+            border-radius: 10px;
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: #86ff8d">
+<div class="container-fluid text-center title">
+  <p class></p>  MyriadSatz
+</div>
+    <div class="jumbotron">
+<p>{{ wordname }} : </p>
+<p><i>Definitions</i>:</p>
+    {% for def in w_def %}
+    <p>{{ def }}</p>
+    {% endfor %}
+ </div>
+    <div class="container">
+        <table class="table table-hover">
+<p><i>{{ wordname }} in usage</i>:</p>
+{% for each_sen in list_sen %}
+            <tbody>
+<td>{{ each_sen }}</td>
+{% endfor %}
+            </tbody>
+            </table>
+    </div>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
